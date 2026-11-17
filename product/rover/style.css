@@ -1,0 +1,476 @@
+/* Isolated Product island; no global resets or shared layout changes. */
+.rover-experience {
+  position: relative;
+  background: #0d1117;
+  color: #f6f7f9;
+}
+.rover-pin {
+  position: relative;
+  height: 100svh;
+  min-height: 800px;
+  overflow: hidden;
+  isolation: isolate;
+}
+.rover-display {
+  position: absolute;
+  left: 34%;
+  right: 0;
+  top: 220px;
+  bottom: 105px;
+  display: grid;
+  place-items: center;
+}
+.rover-display .rover-canvas {
+  position: absolute !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.rover-poster {
+  display: block;
+  width: 78%;
+  height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 35px 25px #0005);
+}
+.rover-model-note {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #8195af;
+  font-size: 11px;
+  pointer-events: none;
+}
+.rover-loading {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 13px;
+  color: #c2d5ee;
+}
+.rover-stage-content {
+  position: absolute;
+  top: 385px;
+  left: 6%;
+  width: 31%;
+  max-width: 440px;
+  z-index: 2;
+}
+.rover-stage-panel[hidden] {
+  display: none;
+}
+.rover-step {
+  color: #8eb6ed;
+  font-size: 12px;
+  margin: 0 0 18px;
+}
+.rover-stage-panel h3 {
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.13;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+.rover-stage-panel .rover-description {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #b1bfd0;
+  margin: 0 0 26px;
+}
+.rover-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 25px;
+  margin-top: 22px;
+}
+.rover-stage-panel .rover-conditions {
+  color: #8e9db1;
+  font-size: 11px;
+  line-height: 1.75;
+  margin-top: 24px;
+}
+.rover-navigation {
+  position: absolute;
+  bottom: 50px;
+  left: 6%;
+  right: 6%;
+  z-index: 3;
+}
+.rover-progress {
+  height: 2px;
+  background: #26374e;
+  margin: 0 0 14px;
+  overflow: hidden;
+}
+.rover-progress > span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #8eb6ed;
+  transform: scaleX(var(--rover-progress, 0.2));
+  transform-origin: left;
+}
+.rover-stage-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.rover-stage-navigation button {
+  flex: 0 0 auto;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: #a9b8cd;
+  padding: 12px 16px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.rover-stage-navigation button[aria-pressed="true"] {
+  color: #f1f7ff;
+  background: #1c3453;
+  border-color: #7ba6dc;
+}
+.rover-stage-navigation button:hover {
+  color: #f1f7ff;
+  background: #15253a;
+}
+.rover-stage-navigation button.is-complete {
+  color: #b9d5f8;
+}
+.rover-nav-number {
+  color: #7f9bbe;
+  font-size: 10px;
+  margin-right: 10px;
+}
+.rover-stage-navigation button[aria-pressed="true"] .rover-nav-number {
+  color: #b9dbff;
+}
+.rover-stage-navigation button:focus-visible,
+.rover-enable:focus-visible {
+  outline: 2px solid #8eb6ed;
+  outline-offset: 4px;
+}
+.rover-enable {
+  position: absolute;
+  right: 6%;
+  bottom: 110px;
+  z-index: 4;
+  border: 1px solid #415775;
+  color: #c6dafa;
+  background: #152035;
+  border-radius: 50px;
+  font-size: 12px;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+.rover-enable span {
+  margin-left: 14px;
+}
+.rover-static-cards {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 30px;
+  width: 100%;
+  margin: 40px 0 0;
+}
+.rover-static-card {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+.rover-static .rover-pin {
+  height: auto;
+  padding: 120px 6% 80px;
+}
+.rover-static .rover-poster {
+  width: 100%;
+  height: 300px;
+}
+.rover-static-card h3 {
+  font-size: 28px;
+  font-weight: 500;
+}
+.rover-static-card p,
+.rover-static-card li {
+  font-size: 14px;
+  color: #b1bfd0;
+}
+/* The introduction lives above the viewer, so the poster needs no heading reserve. */
+@media (min-width: 1024px) {
+  .is-poster .rover-pin {
+    height: min(760px, 100svh);
+    min-height: 620px;
+  }
+  .is-poster .rover-display {
+    top: 32px;
+    bottom: 125px;
+  }
+  .is-poster .rover-stage-content {
+    top: 46%;
+    transform: translateY(-50%);
+  }
+  .rover-static .rover-pin {
+    min-height: 0;
+    padding-top: 32px;
+  }
+}
+@media (min-width: 1024px) and (max-height: 850px) {
+  .rover-pin {
+    min-height: 720px;
+  }
+  .rover-stage-content {
+    top: 285px;
+    width: 33%;
+  }
+  .rover-stage-panel h3 {
+    font-size: 33px;
+    margin-bottom: 15px;
+  }
+  .rover-step {
+    margin-bottom: 14px;
+  }
+  .rover-stage-panel .rover-description {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  .rover-stats {
+    gap: 14px 20px;
+    margin-top: 18px;
+  }
+  .rover-stage-panel .rover-conditions {
+    font-size: 10px;
+    margin-top: 18px;
+  }
+  .rover-display {
+    top: 185px;
+    bottom: 95px;
+  }
+}
+@media (max-width: 760px) {
+  .rover-pin {
+    height: auto;
+    min-height: 0;
+    padding: 90px 6% 35px;
+    display: flex;
+    flex-direction: column;
+  }
+  .rover-static .rover-pin {
+    padding: 90px 6%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rover-experience *,
+  .rover-experience *::before {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.is-3d .rover-model-note {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .rover-pin {
+    padding-top: 30px;
+  }
+  .rover-static .rover-pin {
+    padding-top: 30px;
+  }
+}
+
+/* The configured rover and its name share the pinned stage. */
+.rover-attachment-title {
+  position: absolute;
+  z-index: 2;
+  top: calc(50% + 48px);
+  left: 71%;
+  right: 5%;
+  transform: translateY(-50%);
+  opacity: var(--attachment-title-opacity, 0);
+  pointer-events: none;
+}
+.rover-attachment-title h3 {
+  margin: 0;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: clamp(20px, 2.6vw, 44px);
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: #f6f7f9;
+  transform: translateY(calc((1 - var(--attachment-title-opacity, 0)) * 14px));
+}
+.rover-attachment-title .rover-description {
+  max-width: 36ch;
+  margin: 18px 0 0;
+  color: #b1bfd0;
+  font-size: clamp(13px, 1.05vw, 16px);
+  font-weight: 400;
+  line-height: 1.8;
+  transform: translateY(calc((1 - var(--attachment-title-opacity, 0)) * 14px));
+}
+
+.rover-attachment-title h3 span {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Stable, progressively enhanced first paint. */
+.rover-static .rover-display {
+  position: static;
+  display: block;
+  height: auto;
+  margin: 0;
+}
+[data-poster-preview] {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .rover-js-desktop .rover-static .rover-pin {
+    height: min(760px, 100svh);
+    min-height: 620px;
+    padding: 0;
+  }
+  .rover-js-desktop .rover-static .rover-display {
+    position: absolute;
+    display: grid;
+    left: 34%;
+    right: 0;
+    top: 32px;
+    bottom: 125px;
+    height: auto;
+  }
+  .rover-js-desktop .rover-static .rover-poster {
+    width: 78%;
+    height: 90%;
+  }
+  .rover-js-desktop .rover-static-cards {
+    position: absolute;
+    top: 46%;
+    left: 6%;
+    width: 31%;
+    max-width: 440px;
+    transform: translateY(-50%);
+    margin: 0;
+    display: block;
+  }
+  .rover-js-desktop .rover-static-card:not(:first-child) {
+    display: none;
+  }
+  .rover-js-desktop [data-poster-preview] {
+    display: block;
+  }
+  .rover-js-desktop .rover-static-card h3 {
+    font-size: clamp(28px, 3vw, 44px);
+    margin: 0 0 20px;
+  }
+  .rover-boot-3d .rover-static .rover-pin {
+    height: 100svh;
+    min-height: 800px;
+  }
+  .rover-boot-3d .rover-static .rover-display,
+  .rover-boot-3d .rover-static-cards {
+    visibility: hidden;
+  }
+}
+@media (min-width: 1024px) and (max-height: 850px) {
+  .rover-boot-3d .rover-static .rover-pin {
+    min-height: 720px;
+  }
+  .rover-js-desktop .rover-static-card h3 {
+    font-size: 33px;
+    margin-bottom: 15px;
+  }
+}
+.rover-experience.is-3d .rover-canvas {
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+.rover-experience.is-3d[data-ready="true"] .rover-canvas {
+  opacity: 1;
+}
+@media (max-width: 1023px) {
+  .rover-static .rover-pin {
+    height: auto;
+    min-height: 0;
+    padding: 30px 6%;
+  }
+  .rover-static .rover-display {
+    position: static;
+    height: auto;
+    margin: 0;
+  }
+  .rover-static .rover-poster {
+    width: 100%;
+    height: clamp(270px, 65vw, 420px);
+  }
+  /* The native eight-item accordion below the poster is the small-screen attachment list. */
+  .rover-static-cards {
+    display: none;
+  }
+}
+
+/* The agricultural scene belongs only to the desktop driving experience. */
+.rover-farm-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+.rover-farm-photo {
+  position: absolute;
+  inset: -6%;
+  width: 112%;
+  height: 112%;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 55%;
+  filter: saturate(0.75) brightness(0.76);
+  transform: translate3d(var(--farm-photo-shift, 0px), var(--farm-photo-rise, 0px), 0);
+}
+.rover-farm-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background:
+    radial-gradient(ellipse at 28% 20%, var(--farm-sun, #e6c691), transparent 65%),
+    linear-gradient(var(--farm-sky-top, #142637), transparent 55%, var(--farm-sky-horizon, #73878a));
+}
+.is-3d[data-ready="true"] .rover-farm-backdrop[data-loaded="true"] {
+  opacity: 1;
+}
+@media (min-width: 1024px) {
+  .is-3d .rover-display {
+    inset: 105px 0 20px;
+  }
+  .is-3d .rover-pin::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background:
+      linear-gradient(0deg, #0b121cf5 0, #0b121c00 23%, #0b121c00 82%, #0b121c9e 100%),
+      linear-gradient(90deg, #0d172000 35%, #0b14223d 58%, #0b1422e8 74%, #0b1422f5 100%);
+  }
+  .is-3d .rover-attachment-title {
+    text-shadow: 0 2px 14px #09121d80;
+  }
+  .is-3d .rover-loading {
+    z-index: 2;
+  }
+}

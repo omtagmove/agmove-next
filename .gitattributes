@@ -1,0 +1,14 @@
+* text=auto eol=lf
+
+*.glb binary
+*.ico binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+
+# Preserve upstream formatting in third-party libraries and license notices.
+assets/vendor/*.js -whitespace
+assets/fonts/*-OFL.txt -whitespace

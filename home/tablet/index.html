@@ -1,0 +1,133 @@
+<section class="app-showcase surface-light" id="control-app" aria-labelledby="control-app-title">
+  <div class="app-showcase-heading">
+    <p class="technical-label">AGMOVE CONTROL / ONE CONNECTED PLATFORM</p>
+    <h2 id="control-app-title">
+      One platform.
+      <span class="app-heading-detail">
+        Every robot.
+        <em> Every mission. </em>
+      </span>
+    </h2>
+    <p>
+      Monitor your fleet, manage autonomous missions and stay connected to every operation through
+      one intelligent interface.
+    </p>
+  </div>
+  <div class="tablet-stage">
+    <div class="control-tablet">
+      <span class="tablet-camera" aria-hidden="true"> </span>
+      <div class="tablet-screen" data-fleet-demo>
+        <div class="app-topbar">
+          <a
+            class="app-brand"
+            href="#control-app"
+            aria-label="AgMove Robotics control application showcase"
+          >
+            <img
+              src="/assets/brand/agmove-logo.png"
+              width="1662"
+              height="624"
+              alt="AGMOVE Robotics"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <div class="app-demo-badge">
+            <span> </span>
+            INTERACTIVE DEMO
+          </div>
+          <span class="app-operator" aria-label="Demo operator"> OP </span>
+        </div>
+        <div class="app-shell">
+          <nav class="app-sidebar" aria-label="Control application">
+            <span class="app-nav-label"> WORKSPACE </span>
+            <div
+              class="app-tabs"
+              role="tablist"
+              aria-label="Dashboard views"
+              aria-orientation="vertical"
+            >
+              <button
+                type="button"
+                role="tab"
+                id="app-tab-fleet"
+                aria-controls="app-panel"
+                aria-selected="true"
+                data-view="fleet"
+              >
+                <span aria-hidden="true"> ▦ </span>
+                Fleet Overview
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="app-tab-missions"
+                aria-controls="app-panel"
+                aria-selected="false"
+                tabindex="-1"
+                data-view="missions"
+              >
+                <span aria-hidden="true"> ↗ </span>
+                Missions
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="app-tab-maps"
+                aria-controls="app-panel"
+                aria-selected="false"
+                tabindex="-1"
+                data-view="maps"
+              >
+                <span aria-hidden="true"> ⌖ </span>
+                Maps
+              </button>
+              <button
+                type="button"
+                role="tab"
+                id="app-tab-reports"
+                aria-controls="app-panel"
+                aria-selected="false"
+                tabindex="-1"
+                data-view="reports"
+              >
+                <span aria-hidden="true"> ≡ </span>
+                Reports
+              </button>
+            </div>
+            <div class="app-sidebar-note">
+              <span class="app-system-dot"> </span>
+              Simulation mode
+              <small> No hardware connected </small>
+            </div>
+          </nav>
+          <div
+            class="app-content"
+            id="app-panel"
+            role="tabpanel"
+            aria-labelledby="app-tab-fleet"
+            tabindex="0"
+          >
+            <div class="app-placeholder">
+              <h3>Fleet control, in one place.</h3>
+              <p>
+                Enable JavaScript to explore the interactive application demo. All fleet and mission
+                information shown is illustrative.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="app-statusbar">
+          <span>
+            <span class="app-system-dot"> </span>
+            DEMO ENVIRONMENT
+          </span>
+          <span> Illustrative data · No live telemetry or hardware commands </span>
+        </div>
+        <p class="app-announcement" role="status" aria-live="polite" aria-atomic="true">
+          Explore the demo. Select a rover to get started.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

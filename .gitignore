@@ -1,0 +1,39 @@
+# Installed dependencies and generated site output
+node_modules/
+/dist/
+/assets/product-3d/
+/assets/models/rover-assets.json
+.agmove-build-*/
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Test artifacts and logs
+/artifacts/
+/coverage/
+*.log
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Original CAD exports; keep assets/models/rover.glb in Git
+*.bip
+Agrivehicle.glb

@@ -1,0 +1,347 @@
+/* A simple overview of AgMove's supplied technologies and features. */
+.experience-container {
+  width: 88%;
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.technology-experience [id] {
+  scroll-margin-top: 125px;
+}
+.technology-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 10%;
+  align-items: center;
+  padding-top: 180px;
+  padding-bottom: 85px;
+}
+.technology-intro h1 {
+  font-size: clamp(52px, 6.2vw, 92px);
+  line-height: 1.06;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  margin: 0 0 28px;
+}
+.technology-intro h1 em {
+  color: #8eb6ed;
+  font-weight: 400;
+}
+.technology-intro p {
+  font-size: 19px;
+  color: #e1e8f2;
+  line-height: 1.8;
+  margin: 0;
+}
+.technology-intro .technology-intro-description {
+  font-size: 16px;
+  color: #a1aab8;
+  max-width: 450px;
+  margin-top: 20px;
+}
+.technology-intro > img {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  justify-self: center;
+}
+/* Field technology, using the site's existing blue, off-white and dark surfaces. */
+.technology-experience .technology-eyebrow {
+  margin: 0 0 22px;
+  color: #8eb6ed;
+  font-size: 11px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.technology-overview {
+  padding-block: 100px;
+}
+.fieldwork-heading {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: 10%;
+  margin-bottom: 56px;
+}
+.fieldwork-heading h2 {
+  margin: 0;
+  font-size: clamp(38px, 4.4vw, 64px);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+.fieldwork-heading h2 em,
+.technology-overview .technology-eyebrow {
+  color: #1451a4;
+  font-weight: 400;
+}
+.fieldwork-heading > p {
+  margin: 0 0 3px;
+  max-width: 430px;
+  color: #526071;
+  font-size: 16px;
+  line-height: 1.9;
+}
+.fieldwork-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 8%;
+  align-items: start;
+}
+.fieldwork-map {
+  position: sticky;
+  top: 140px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #2b4057;
+  border-radius: 12px;
+  background: #101c2b;
+  color: #dbe7f7;
+}
+.fieldwork-map-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 26px 28px 0;
+  font-size: 16px;
+}
+.fieldwork-map-label {
+  color: #9db3cc;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.fieldwork-map svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.fieldwork-map figcaption {
+  margin-inline: 28px;
+  padding: 21px 0 23px;
+  border-top: 1px solid #30445c;
+}
+.fieldwork-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  color: #c3d7f3;
+}
+.fieldwork-legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.fieldwork-legend span {
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  border-radius: 2px;
+}
+.fieldwork-legend .legend-crops {
+  background: #72959d;
+  border-radius: 50%;
+}
+.fieldwork-legend .legend-route {
+  width: 18px;
+  height: 0;
+  border-top: 2px dashed #a9ccf9;
+}
+.fieldwork-legend .legend-rover {
+  background: #dce8f6;
+}
+.fieldwork-map small {
+  color: #9db3cc;
+  font-size: 11px;
+}
+.fieldwork-principle {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 18px;
+  padding-block: 29px;
+  border-top: 1px solid #ced7e1;
+}
+.fieldwork-principle:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+.fieldwork-principle:last-child {
+  padding-bottom: 0;
+}
+.fieldwork-number {
+  padding-top: 3px;
+  color: #627b99;
+  font-size: 11px;
+}
+.fieldwork-principle .fieldwork-category {
+  margin: 0 0 12px;
+  color: #1451a4;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.fieldwork-principle h3 {
+  margin: 0 0 14px;
+  color: #101722;
+  font-size: clamp(24px, 2.2vw, 31px);
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+.fieldwork-principle p {
+  margin: 0;
+  color: #526071;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.fieldwork-principle .fieldwork-note {
+  margin-top: 13px;
+  font-size: 12px;
+}
+.fieldwork-principle .text-link {
+  margin-top: 22px;
+  color: #1451a4;
+  font-size: 12px;
+}
+.technology-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-block: 60px 100px;
+}
+.technology-cta h2 {
+  margin: 0;
+  font-size: clamp(32px, 3.4vw, 48px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+.technology-cta h2 em {
+  color: #8eb6ed;
+  font-weight: 400;
+}
+.technology-cta p {
+  max-width: 400px;
+  margin: 22px 0 0;
+  color: #a1aab8;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.technology-cta .button {
+  flex-shrink: 0;
+}
+@media (max-width: 1000px) {
+  .technology-intro,
+  .fieldwork-heading,
+  .fieldwork-layout {
+    gap: 6%;
+  }
+  .fieldwork-map-heading {
+    padding: 22px 20px 0;
+  }
+  .fieldwork-map-label {
+    display: none;
+  }
+  .fieldwork-map figcaption {
+    margin-inline: 20px;
+  }
+  .fieldwork-principle {
+    grid-template-columns: 20px 1fr;
+    gap: 12px;
+  }
+}
+@media (max-width: 760px) {
+  .technology-intro {
+    grid-template-columns: 1fr;
+    padding-top: 155px;
+    padding-bottom: 55px;
+    gap: 35px;
+  }
+  .technology-intro h1 {
+    font-size: clamp(42px, 12vw, 56px);
+  }
+  .technology-intro p {
+    font-size: 17px;
+  }
+  .technology-intro .technology-intro-description {
+    font-size: 14px;
+  }
+  .technology-intro > img {
+    max-width: 320px;
+  }
+  .technology-overview {
+    padding-block: 65px;
+  }
+  .fieldwork-heading,
+  .fieldwork-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .fieldwork-heading {
+    margin-bottom: 36px;
+  }
+  .fieldwork-heading h2 {
+    font-size: clamp(36px, 9.5vw, 48px);
+  }
+  .fieldwork-heading > p {
+    font-size: 14px;
+  }
+  .fieldwork-map {
+    position: static;
+  }
+  .fieldwork-map-label {
+    display: inline;
+    font-size: 9px;
+  }
+  .fieldwork-map-heading {
+    font-size: 14px;
+  }
+  .fieldwork-legend {
+    gap: 12px 16px;
+    font-size: 11px;
+  }
+  .fieldwork-principle {
+    grid-template-columns: 22px 1fr;
+    gap: 14px;
+    padding-block: 26px;
+  }
+  .fieldwork-principle:first-child {
+    padding-top: 16px;
+  }
+  .fieldwork-principle h3 {
+    font-size: 27px;
+  }
+  .technology-cta {
+    display: block;
+    padding-block: 25px 70px;
+  }
+  .technology-cta h2 {
+    font-size: 36px;
+  }
+  .technology-cta .button {
+    margin-top: 30px;
+    font-size: 13px;
+  }
+}
+
+/* Softer terrain on this page only. Layered autonomy keeps its own background. */
+html[data-theme="technology"] body,
+.technology-intro,
+.technology-cta {
+  background-color: #080b12;
+  background-image: linear-gradient(#080b1252, #080b1252), var(--terrain-map);
+}
+.technology-overview,
+html[data-theme="technology"] .page-footer {
+  background-image: linear-gradient(#f6f7f952, #f6f7f952), var(--terrain-map);
+}

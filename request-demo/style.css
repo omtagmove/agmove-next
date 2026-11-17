@@ -1,0 +1,46 @@
+/* Enquiry Form */
+@layer pages {
+  .full {
+    grid-column: 1/-1;
+  }
+  .form-note {
+    font-size: 0.75rem;
+    margin: 0;
+  }
+  #form-status {
+    font-size: 0.8125rem;
+    color: var(--accent-text);
+  }
+}
+
+/* Contact */
+@layer pages {
+  .demo-grid {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 10%;
+  }
+  .demo-grid aside p {
+    max-width: 330px;
+  }
+  .email {
+    display: block;
+    font-size: clamp(20px, 2.4vw, 32px);
+    margin: 25px 0;
+  }
+  .demo-grid hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 45px 0;
+  }
+}
+
+@layer responsive {
+  @media (max-width: 760px) {
+    .demo-grid {
+      grid-template-columns: 1fr;
+      gap: 45px;
+    }
+  }
+}

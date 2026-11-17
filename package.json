@@ -1,0 +1,36 @@
+{
+  "name": "agmove-next",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm run build:rover && python3 tools/serve.py",
+    "build": "npm run build:rover && python3 tools/build_site.py && python3 tools/check_site.py --built dist",
+    "preview": "python3 -m http.server 4174 --bind 127.0.0.1 --directory dist",
+    "precheck": "npm run build:rover",
+    "check": "python3 tools/check_site.py",
+    "format": "prettier --write \"{home,technology,company,careers,product,request-demo,shared}/**/*.{html,css,js,jsx}\" \"tests/**/*.{mjs,json}\" package.json README.md",
+    "format:check": "prettier --check \"{home,technology,company,careers,product,request-demo,shared}/**/*.{html,css,js,jsx}\" \"tests/**/*.{mjs,json}\" package.json README.md",
+    "pretest": "npm run build:rover",
+    "test": "node --test tests/js/*.test.mjs && python3 -m unittest discover -s tests -p \"test_*.py\"",
+    "test:browser": "npm run build && node tests/browser/check.mjs",
+    "assets:terrain": "python3 tools/generate_terrain.py",
+    "build:rover": "node tools/build_rover.mjs",
+    "test:rover": "npm run build && node tests/browser/rover.mjs",
+    "test:startup": "npm run build && node tests/browser/startup.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "prettier": "3.6.2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.8.2",
+    "gsap": "^3.15.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0"
+  }
+}

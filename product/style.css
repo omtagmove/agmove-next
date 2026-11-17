@@ -1,0 +1,315 @@
+/* Product configurations, kept independent from the technology story. */
+.experience-container {
+  width: 88%;
+  max-width: 1600px;
+  margin-inline: auto;
+}
+.product-experience h2 {
+  font-size: clamp(38px, 4.6vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+  margin: 0;
+}
+.product-experience h2 em {
+  font-weight: 400;
+}
+.product-experience p {
+  line-height: 1.85;
+}
+.product-experience button {
+  font-family: inherit;
+  cursor: pointer;
+}
+.product-experience :is(a, button):focus-visible {
+  outline: 2px solid #8eb6ed;
+  outline-offset: 6px;
+}
+.product-experience [id] {
+  scroll-margin-top: 90px;
+}
+.product-intro {
+  background-color: #080b12;
+  background-image: linear-gradient(#080b1252, #080b1252), var(--terrain-map);
+  padding-top: 165px;
+  padding-bottom: 24px;
+}
+.rover-island {
+  border-top: 1px solid #26303d;
+}
+.product-intro h1 {
+  font-size: clamp(52px, 6.5vw, 100px);
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  margin: 0 0 30px;
+}
+.product-intro h1 em {
+  color: #8eb6ed;
+  font-weight: 400;
+}
+.product-intro p {
+  max-width: 550px;
+  color: #a1aab8;
+  font-size: 17px;
+}
+.product-intro .text-link {
+  margin-top: 20px;
+}
+.product-cta {
+  padding-block: 110px;
+  background-color: #080b12;
+  background-image: linear-gradient(#080b1252, #080b1252), var(--terrain-map);
+}
+.product-cta-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 50px;
+}
+.product-cta em {
+  color: #8eb6ed;
+}
+.product-cta .button {
+  flex-shrink: 0;
+}
+@media (max-width: 760px) {
+  .product-intro {
+    padding-top: 140px;
+    padding-bottom: 24px;
+  }
+  .product-intro h1 {
+    font-size: 49px;
+  }
+  .product-intro p {
+    font-size: 14px;
+  }
+  .product-cta {
+    padding-block: 80px;
+  }
+  .product-cta-inner {
+    display: block;
+  }
+  .product-cta .button {
+    margin-top: 30px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .product-experience * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Vertical attachment catalogue. All names remain visible; details open in place. */
+.product-experience > .attachment-catalogue {
+  padding: 120px 0;
+  background-color: #080b12;
+}
+.attachment-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.9fr) minmax(0, 1.4fr);
+  gap: 10%;
+  align-items: start;
+}
+.attachment-introduction {
+  position: sticky;
+  top: 155px;
+}
+.attachment-introduction h2 em {
+  color: #8eb6ed;
+}
+.attachment-introduction > p {
+  max-width: 340px;
+  margin: 28px 0;
+  color: #a1aab8;
+  font-size: 15px;
+}
+.attachment-introduction .text-link {
+  font-size: 13px;
+}
+.attachment-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.attachment-list > li {
+  border-bottom: 1px solid #29364a;
+}
+.attachment-list > li:first-child {
+  border-top: 1px solid #29364a;
+}
+.attachment-item {
+  scroll-margin-top: 125px;
+}
+.attachment-item summary {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  min-height: 108px;
+  padding: 27px 0;
+  cursor: pointer;
+  list-style: none;
+}
+.attachment-item summary::-webkit-details-marker {
+  display: none;
+}
+.attachment-number {
+  flex: 0 0 25px;
+  color: #7e93b0;
+  font-size: 11px;
+}
+.attachment-item h3 {
+  margin: 0;
+  font-size: clamp(23px, 2.4vw, 37px);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.035em;
+}
+.attachment-toggle {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  margin-left: auto;
+  color: #8eb6ed;
+}
+.attachment-toggle::before,
+.attachment-toggle::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  top: 11px;
+  left: 5px;
+  width: 14px;
+  height: 1px;
+}
+.attachment-toggle::after {
+  transform: rotate(90deg);
+  transition: transform 0.2s;
+}
+.attachment-item[open] .attachment-toggle::after {
+  transform: rotate(0deg);
+}
+.attachment-item[open] h3,
+.attachment-item summary:hover h3 {
+  color: #b5d2f7;
+}
+.attachment-item summary:focus-visible {
+  outline: 2px solid #8eb6ed;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+.attachment-content {
+  min-height: 135px;
+  padding: 0 48px 35px;
+}
+.attachment-content p {
+  font-size: 15px;
+  color: #aebdd1;
+  margin: 0;
+  max-width: 520px;
+}
+.attachment-content .attachment-tagline {
+  margin-bottom: 12px;
+  color: #c3d7f3;
+  font-size: 17px;
+  line-height: 1.5;
+}
+.attachment-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 22px 0 0;
+  border-top: 1px solid #29364a;
+}
+.attachment-facts strong,
+.attachment-facts span {
+  display: block;
+}
+.attachment-facts strong {
+  color: #c3d7f3;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.attachment-facts span {
+  margin-top: 6px;
+  color: #a1aab8;
+  font-size: 11px;
+  line-height: 1.6;
+}
+@media (max-width: 1100px) {
+  .attachment-layout {
+    gap: 7%;
+    grid-template-columns: minmax(230px, 0.85fr) minmax(0, 1.3fr);
+  }
+  .attachment-introduction h2 {
+    font-size: 45px;
+  }
+  .attachment-item summary {
+    gap: 15px;
+  }
+  .attachment-content {
+    padding-left: 40px;
+  }
+  .attachment-facts {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .attachment-facts li {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: baseline;
+  }
+  .attachment-facts span {
+    margin-top: 0;
+  }
+}
+@media (max-width: 760px) {
+  .product-experience > .attachment-catalogue {
+    padding: 75px 0;
+  }
+  .attachment-layout {
+    display: block;
+  }
+  .attachment-introduction {
+    position: static;
+    margin-bottom: 45px;
+  }
+  .attachment-introduction h2 {
+    font-size: 43px;
+  }
+  .attachment-introduction > p {
+    font-size: 14px;
+    max-width: 380px;
+    margin: 24px 0;
+  }
+  .attachment-item summary {
+    min-height: 90px;
+    padding: 24px 0;
+    gap: 12px;
+  }
+  .attachment-number {
+    flex-basis: 22px;
+    font-size: 10px;
+  }
+  .attachment-item h3 {
+    font-size: 25px;
+  }
+  .attachment-content {
+    min-height: 0;
+    padding: 0 30px 30px 34px;
+    display: block;
+  }
+  .attachment-content p {
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .attachment-toggle::after {
+    transition: none;
+  }
+}
